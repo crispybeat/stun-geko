@@ -20,3 +20,12 @@
                 return true;
             }
         }
+ if (heuristic == Heuristic.Scanline)
+        {
+            for (int i = observedSoFar; i < wave.Length; i++)
+            {
+                if (!periodic && (i % MX + N > MX || i / MX + N > MY)) continue;
+                if (sumsOfOnes[i] > 1)
+                {
+                    observedSoFar = i + 1;
+                    return i;
