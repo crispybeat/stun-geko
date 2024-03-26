@@ -7,7 +7,7 @@
 
         for (int l = 0; l < limit || limit < 0; l++)
         {
-            int node = NextUnobservedNode(random);
+            int node = NextUnobservedNode(random);//yes
             if (node >= 0)
             {
                 Observe(node, random);
